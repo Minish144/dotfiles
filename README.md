@@ -13,7 +13,7 @@
 
 * Terminal: [Alacritty](https://archlinux.org/packages/community/x86_64/alacritty/)
 
-* VSCode Color Theme: [Academy City](https://marketplace.visualstudio.com/items?itemName=CactusBlue.academy-city-theme)
+* VSCode Color Theme: [Tokyo City](https://open-vsx.org/extension/huytd/tokyo-city)
 
 ----
 
