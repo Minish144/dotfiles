@@ -23,11 +23,12 @@ exec_always "sh ~/.config/polybar/launch.sh"
 exec_always "picom --config ~/.config/picom/picom.conf"
 
 # Window gaps setitings
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 # Floating window centering
 for_window [class=".*"] move position center
-floating_minimum_size 1024 x 768
+# floating_minimum_size 1024 x 768
+floating_maximum_size 1024 x 768
 
 # Screenshots
 bindsym --release Ctrl+Shift+2 exec gnome-screenshot -w -c
@@ -398,7 +399,7 @@ bindsym $mod+m bar mode toggle
 # Set inner/outer gaps
 # gaps inner 14
 # gaps outer -2
-gaps inner 12
+gaps inner 11
 
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.

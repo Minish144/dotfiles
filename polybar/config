@@ -13,9 +13,12 @@ foreground = ${colors.foreground}
 radius = 0
 
 font-0 = "FuraCode Nerd Font;3"
-font-1 = "Open Sans:size=11;3"
+font-1 = "Font Awesome 5 Brands,Font Awesome 5 Brands Regular:style=Regular"
+font-2 = "Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid"
+font-3 = "Font Awesome 5 Free,Font Awesome 5 Free Regular:style=Regular"
+font-4 = "RocknRoll One:size=12;2"
 
-widtth = 100%
+width = 100%
 height = 27
 
 modules-left = i3
@@ -35,6 +38,18 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
+; fonts
+ws-icon-0 = 1;一
+ws-icon-1 = 2;二
+ws-icon-2 = 3;三
+ws-icon-3 = 4;四
+ws-icon-4 = 5;五
+ws-icon-5 = 6;六
+ws-icon-6 = 7;七
+ws-icon-7 = 8;八
+ws-icon-8 = 9;九
+ws-icon-9 = 10;十
+ws-icon-default = 0;
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
@@ -43,23 +58,23 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+label-focused = %icon%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -77,8 +92,8 @@ interval = 0.5
 ;   <bar-load>
 ;   <ramp-load>
 ;   <ramp-coreload>
-label = CPU %percentage%%
-
+label = " %percentage%%"
+; label-font = 6
 ; format = " <label> <ramp-coreload> "
 
 ; Available tokens:
@@ -99,7 +114,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4c566a
 
 [module/memory]
-label = " MEM %percentage_used%% "
+label = " %percentage_used%%"
 type = internal/memory
 
 
@@ -107,20 +122,21 @@ type = internal/memory
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume = " %percentage%%"
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+
+label-muted = " 0% SOUND MUTED "
 label-muted-foreground = #666
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #D8DEE9
-bar-volume-foreground-1 = #D8DEE9
-bar-volume-foreground-2 = #D8DEE9
-bar-volume-foreground-3 = #D8DEE9
-bar-volume-foreground-4 = #D8DEE9
-bar-volume-foreground-5 = #D8DEE9
-bar-volume-foreground-6 = #D8DEE9
+bar-volume-foreground-0 = #ECEFF4
+bar-volume-foreground-1 = #ECEFF4
+bar-volume-foreground-2 = #ECEFF4
+bar-volume-foreground-3 = #ECEFF4
+bar-volume-foreground-4 = #ECEFF4
+bar-volume-foreground-5 = #ECEFF4
+bar-volume-foreground-6 = #ECEFF4
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -136,11 +152,11 @@ use-ui-max = false
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "  "
+format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 format-prefix-underline = ${colors.primary}
 
-label-layout = %layout%
+label-layout = "%layout%"
 label-layout-underline = ${colors.primary}
 
 label-indicator-padding = 2
@@ -159,7 +175,8 @@ interface = wlp10s0f3u2u4
 ; Available tags:
 ;   <label-connected> (default)
 ;   <ramp-signal>
-format-connected = <label-connected> <ramp-signal>
+format-connected = <label-connected>
+; <ramp-signal>
 
 ; Available tags:
 ;   <label-disconnected> (default)
@@ -182,7 +199,7 @@ format-packetloss = <animation-packetloss>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-label-connected = %essid%
+label-connected =  %essid%
 label-connected-foreground = #eefafafa
 
 ; Default: (none)
