@@ -18,5 +18,7 @@
 ----
 
 ![image info](screenshots/2021-04-25-151105_3440x1440_scrot.png)
+[> click for full](https://imgur.com/7c0RGhA.png)
 
 ![image info](screenshots/2021-04-25-150734_3440x1440_scrot.png)
+[> click for full](https://imgur.com/mlWoODz.png)
