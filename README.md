@@ -15,8 +15,8 @@
 
 * VSCode Color Theme: [Academy City](https://marketplace.visualstudio.com/items?itemName=CactusBlue.academy-city-theme)
 
-https://i.imgur.com/mlWoODz.png
+----
 
-![image info](https://i.imgur.com/mlWoODz.png)
+![image info](screenshots/2021-04-25-151105_3440x1440_scrot.png)
 
-https://i.imgur.com/7c0RGhA.png
+![image info](screenshots/2021-04-25-150734_3440x1440_scrot.png)
