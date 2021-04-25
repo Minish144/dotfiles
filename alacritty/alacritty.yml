@@ -9,28 +9,31 @@ background_opacity: 0.99
 # Colors (Nord)
 colors:
    # Default colors
-   primary:
-     background: '#1D252C'
-     foreground: '#B7C5D3'
+  primary:
+    background: '#1D252C'
+    foreground: '#B7C5D3'
 
-   # Normal colors
-   normal:
-     black:   '#3B4252'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#88C0D0'
-     white:   '#E5E9F0'
+  # Normal colors
+  normal:
+    black:   '#3B4252'
+    red:     '#BF616A'
+    green:   '#A3BE8C'
+    yellow:  '#EBCB8B'
+    blue:    '#81A1C1'
+    magenta: '#B48EAD'
+    cyan:    '#88C0D0'
+    white:   '#E5E9F0'
 
-   # Bright colors
-   bright:
-     black:   '#4C566A'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#8FBCBB'
-     white:   '#ECEFF4'
+  # Bright colors
+  bright:
+    black:   '#4C566A'
+    red:     '#BF616A'
+    green:   '#A3BE8C'
+    yellow:  '#EBCB8B'
+    blue:    '#81A1C1'
+    magenta: '#B48EAD'
+    cyan:    '#8FBCBB'
+    white:   '#ECEFF4'
+
+font:
+  size: 13
