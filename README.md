@@ -18,7 +18,7 @@
 ----
 
 ![image info](screenshots/rice.png)
-[> click for full](https://imgur.com/7c0RGhA.png)
+[> click for full](https://pasteboard.co/JYZ6Q6n.png)
 
 ![image info](screenshots/fetch.png)
-[> click for full](https://imgur.com/mlWoODz.png)
+[> click for full](https://pasteboard.co/JYZ6r3X.png)
