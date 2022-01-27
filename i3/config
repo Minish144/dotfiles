@@ -14,13 +14,17 @@ exec_always "setxkbmap -model pc104 -layout us,ru -variant ,, -option grp:alt_sh
 exec_always "xinput --set-prop $(xinput list --id-only pointer:Logitech\ G\ Pro\ ) libinput\ Accel\ Speed -0.8"
 
 # Set display settings
-exec "xrandr --output DisplayPort-0 --mode 3440x1440 --rate 120"
+exec_always "xrandr --output DisplayPort-0 --mode 3440x1440 --rate 120"
 
 # Polybar
 exec_always "sh ~/.config/polybar/launch.sh"
 
 # Picom
 exec_always "picom --config ~/.config/picom/picom.conf"
+
+# Screen locker
+bindsym $mod+Ctrl+l exec "~/.local/bin/lock"
+# exec_always xautolock -time 10 -locker '~/.local/bin/lock' &
 
 # Window gaps setitings
 for_window [class=".*"] border pixel 3
@@ -31,9 +35,8 @@ for_window [class=".*"] move position center
 floating_maximum_size 1024 x 768
 
 # Screenshots
-bindsym --release Ctrl+Shift+2 exec gnome-screenshot -w -c
-bindsym --release Ctrl+Shift+3 exec gnome-screenshot -c
-bindsym --release Ctrl+Shift+4 exec gnome-screenshot -a -с
+bindsym --release Ctrl+Shift+3 exec flameshot full -c -p ~/screens
+bindsym --release Ctrl+Shift+4 exec flameshot gui -p ~/screens
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -88,7 +91,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec google-chrome-stable
+bindsym $mod+F2 exec google-chrome-beta
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -315,7 +318,7 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker '~/.local/bin/lock'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -400,7 +403,6 @@ bindsym $mod+m bar mode toggle
 # gaps inner 14
 # gaps outer -2
 gaps inner 11
-
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

@@ -22,15 +22,19 @@ width = 100%
 height = 27
 
 modules-left = i3
-modules-right = eth wifi cpu memory pulseaudio xkeyboard date
+modules-right = eth wifi cpu memory pulseaudio keyboard date
 modules-center = title
 
 padding = 1
 module-margin = 1
 
+tray-position = right
+tray-padding = 10
+tray-background = ${colors.background}
+
 [module/title]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:70:...%
 
 [module/i3]
 type = internal/i3
@@ -148,7 +152,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 use-ui-max = false
 
-[module/xkeyboard]
+[module/keyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
@@ -228,5 +232,5 @@ animation-packetloss-framerate = 500
 
 [module/date]
 type = internal/date
-date = "%d %b %Y  %H:%M  "
-date-alt = "%H:%M  "
+date = "%d %b %Y  %H:%M "
+date-alt = "%H:%M"
