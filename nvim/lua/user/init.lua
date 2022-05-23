@@ -13,6 +13,8 @@ local config = {
     },
   },
 
+  header = { },
+
   -- Default theme configuration
   default_theme = {
     diagnostics_style = { italic = true },
